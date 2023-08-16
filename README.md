@@ -1,2 +1,24 @@
-# AntiWeChatBrowserAPI
-API backend based on Python Flask
+# 反微信浏览器 API 后端
+这是基于 Python + Flask 的反微信浏览器 API。
+
+## 检测原理
+检查用户访问请求中的 User-Agent 中是否包含以下字符：
+```
+WindowsWechat     # Windows 版微信浏览器
+MacWeChat         # macOS 版微信浏览器
+MicroMessenger    # 所有平台的微信浏览器
+```
+一旦检测到 User-Agent 中包含以上关键字，则会弹出拒绝让用户访问并指导让用户通过正常浏览器访问的提示。
+
+## 为什么要做这个东西
+我们注意到，由于中国国内用户极度依赖微信的使用，而微信浏览器存在很多问题，主要问题就是下载文件不会显示进度从而导致大文件非常容易损坏。此外，我们还希望阻止用户从移动端下载文件。
+
+## 关于 main.py
+这是一套简单的基于 Flask 的实现构建示例。如果您的前端是使用其它语言实现的（例如 PHP），您也可以参考这一套判断逻辑。
+
+## TO-DO
+防移动端下载的多语言自适应功能
+
+## License
+MIT
+templates 目录内的页面也涉及到了同样 MIT 协议的 bootstrap。
