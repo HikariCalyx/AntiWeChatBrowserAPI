@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>需要注意</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="css/sticky-footer.css" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Begin page content -->
+        <main class="flex-shrink-0">
+            <div class="container">
+                <h1 class="mt-5">此文件需要在 PC 端完成下载</h1>
+                <p class="lead">
+                    这个文件需要在 PC 端完成下载，不应下载到移动设备上。如果仍然需要下载到移动设备上，请点击下面的按钮，但 Hikari Calyx Tech 无法为错误下载导致的后果负责。
+                </p>
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#downloadAnywayModal"
+                >
+                    仍然想在移动设备上下载？
+                </button>
+                <h2 class="mt-5">
+                    请参考以下任意一种方法将下载链接发送到 PC 端访问。
+                </h2><br />
+                <div class="alert alert-warning" role="alert">
+                    我们不建议您在 PC 端浏览器的地址栏手动输入此链接，以免输入出错！
+                </div>
+                <h3 class="mt-5">利用 Chrome 分享功能将链接发送到电脑上</h3>
+                <p>我们假定您使用的是 Google Chrome 浏览器且 PC 端和移动端登录了相同的 Google 帐号。此功能也支持 Microsoft Edge 浏览器。</p>
+                <li>请点击右上角的“菜单”图标，然后选择“分享…”。</li>
+                <li>选择“发送到您的设备”。</li>
+                <li>在里面选择您的电脑的名字。</li>
+                <li>然后，您的电脑的 Chrome 浏览器就会收到手机发来的链接分享，点击访问即可。</li>
+                <h3 class="mt-5">如果您打算通过微信将链接发送到电脑上</h3>
+                <li>在您的电脑上打开微信电脑版。如果您的电脑上没有安装微信，可以在搜索引擎上搜索“微信 PC 版”来下载和安装。</li>
+                <li>用手机扫码登录您的微信账号并确认登录。</li>
+                <li>这时您的手机微信上应该会出现一个“文件传输助手”会话，请打开它。</li>
+                <li>将您收到的下载链接复制下来，发送给“文件传输助手”。</li>
+                <li>此链接即会出现在您电脑上的“文件传输助手”内。复制这个链接到您电脑的浏览器中即可开始下载。</li>
+                <h3 class="mt-5">如果您打算通过 QQ 或 TIM 将链接发送到电脑上</h3>
+                <li>请在电脑上打开 QQ 或 TIM。如果您还没有安装，请自行在搜索引擎搜索“PC QQ”或“PC TIM”下载。</li>
+                <li>然后在电脑上扫码登录您的 QQ 号，并在手机上确认登录。</li>
+                <li>此时您的手机上应该会多出一个“文件传输助手”，请点开它。</li>
+                <li>将您收到的下载链接复制下载，发送给“文件传输助手”。</li>
+                <li>然后，在电脑上，您就能通过“文件传输助手”看到我们要求您下载的文件的链接了。</li>
+                <h3 class="mt-5">如果我使用的是 WhatsApp、Telegram、Snapchat、LINE、Kakao Talk 等非中国境内常用聊天软件的话？</h3>
+                <li>它们应当提供了 Web 版本或者相应的 PC 版客户端，使用类似上述 QQ / 微信发送消息的方法发送即可。</li>
+                <p>这是您的访问设备的 User-Agent，仅供调试使用：</p>
+                <p>{{ useragent }}</p>
+            </div>
+            <div
+                class="modal fade"
+                id="downloadAnywayModal"
+                tabindex="-1"
+                aria-labelledby="downloadAnywayModal"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="downloadAnywayModalLabel">是否确认在移动设备上下载？</h1>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>下载到移动设备上的文件无法用于后续服务，且可能会被您使用的浏览器劫持导致文件损坏！</p>
+                            <p>您仍然希望继续吗？</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ targeturl }}">
+                                <button type="button" class="btn btn-primary">是</button>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">否</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <span class="text-muted">
+                    {{ copyrightstring }}
+                </span>
+            </div>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/snippets.js"></script>
+    </body>
+</html>

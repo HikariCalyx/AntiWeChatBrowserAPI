@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>需要注意</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="css/sticky-footer.css" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Begin page content -->
+        <main class="flex-shrink-0">
+            <div class="container">
+                <h1 class="mt-5">距离可以正常下载文件，只剩下最后一个步骤</h1>
+                <button type="button" class="btn btn-primary" id="liveToastBtn">点击查看相关步骤</button>
+                <h2 class="mt-5">
+                    为什么我会看到此页面？
+                </h1>
+                <p>
+                    我们收到大量用户反馈，直接从微信浏览器下载文件不会显示下载进度，因此下载回来的文件极大概率会损坏。
+                </p>
+                <p>
+                    因此，我们不允许您从微信浏览器下载文件。
+                </p>
+                <div class="toast-container position-fixed top-0 end-0 p-3">
+                    <div
+                        id="liveToast"
+                        class="toast"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                        data-bs-autohide="false"
+                    >
+                        <div class="toast-header">
+                            <strong class="me-auto">请点击位于窗口右上角的“…”按钮……</strong>
+                        </div>
+                        <div class="toast-body">
+                            <p>然后，选择“使用默认浏览器打开”。</p>
+                            <img src="img/procedure.gif" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <span class="text-muted">
+                    Anti WeChat Browser API by Hikari Calyx Tech
+                    <br>
+                    {{ copyrightstring }}
+                </span>
+            </div>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/snippets.js"></script>
+    </body>
+</html>
