@@ -26,4 +26,4 @@ https://api.hikaricalyx.com/FileDownload/CTWorks?id=20edf136f7ba47
 ## License
 MIT
 
-templates 目录内的页面也涉及到了同样 MIT 协议的 bootstrap。
+web/static 目录内的 CSS/JS 代码[引用自 bootstrap](https://github.com/twbs/bootstrap)。
