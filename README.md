@@ -5,7 +5,7 @@
 检查用户访问请求中的 User-Agent 中是否包含以下字符：
 ```
 WindowsWechat     # Windows 版微信浏览器
-MacWeChat         # macOS 版微信浏览器
+MacWechat         # macOS 版微信浏览器
 MicroMessenger    # 所有平台的微信浏览器
 ```
 一旦检测到 User-Agent 中包含以上关键字，则会弹出拒绝让用户访问并指导让用户通过正常浏览器访问的提示。
