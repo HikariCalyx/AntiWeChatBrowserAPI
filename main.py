@@ -27,7 +27,7 @@ def check_useragent(useragent):
 
 
 ############### CowTransfer Download Anti-WeChat Method ###############
-app.route('/FileDownload/CTWorks', methods=['GET'])
+@app.route('/FileDownload/CTWorks', methods=['GET'])
 
 
 def ctworks():
